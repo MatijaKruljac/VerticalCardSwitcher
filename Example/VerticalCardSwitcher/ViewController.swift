@@ -21,34 +21,34 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         verticalCardSwitcher.display()
     }
     
-    func numberOfCards() -> Int {
+    func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int {
         return 120
     }
     
-    func distanceBetweenCards() -> CGFloat {
+    func distanceBetweenCards(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
         return 20.0
     }
     
-    func design(for cardView: CardView, at index: Int) {
+    func addDesign(for cardView: CardView, at index: Int, andFor verticalCardSwitcher: VerticalCardSwitcher) {
         cardView.backgroundColor = UIColor.random()
         cardView.layer.cornerRadius = 8
         cardView.layer.masksToBounds = true
         setupLabel(for: cardView, with: String(index))
     }
     
-    func nextCardStartedScrollingUp(cardView: CardView) {
+    func nextCardStartedScrollingUp(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
         print("nextCardStartedScrollingUp")
     }
     
-    func currentCardStartedScrollingDown(cardView: CardView) {
+    func currentCardStartedScrollingDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
         print("currentCardStartedScrollingDown")
     }
     
-    func currentCardScrolledDown(cardView: CardView) {
+    func currentCardScrolledDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
         print("currentCardScrolledDown")
     }
     
-    func nextCardScrolledUp(cardView: CardView) {
+    func nextCardScrolledUp(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
         print("nextCardScrolledUp")
     }
     

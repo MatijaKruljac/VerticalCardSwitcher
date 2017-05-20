@@ -11,11 +11,14 @@ import UIKit
 
 public class CardView: UIView {
     
+    public var panGestureRecognizer: UIPanGestureRecognizer!
     public var indexInCollection: Int!
     
-    public init(frame: CGRect, with indexInCollection: Int) {
-        self.indexInCollection = indexInCollection
+    public init(frame: CGRect, with indexInCollection: Int, andWith panGestureRecognizer: UIPanGestureRecognizer) {
         super.init(frame: frame)
+        self.panGestureRecognizer = panGestureRecognizer
+        self.indexInCollection = indexInCollection
+        self.addGestureRecognizer(panGestureRecognizer)
     }
     
     required public init?(coder aDecoder: NSCoder) {
