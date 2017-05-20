@@ -1,0 +1,16 @@
+PODS:
+  - VerticalCardSwitcher (0.1.0)
+
+DEPENDENCIES:
+  - VerticalCardSwitcher (from `../`)
+
+EXTERNAL SOURCES:
+  VerticalCardSwitcher:
+    :path: ../
+
+SPEC CHECKSUMS:
+  VerticalCardSwitcher: 7597cb533c00f4bad3903531c0e126edfc20906d
+
+PODFILE CHECKSUM: c6236c247fbf4b5d988a4868b213e217216b4486
+
+COCOAPODS: 1.2.0

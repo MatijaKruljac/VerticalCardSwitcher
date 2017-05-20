@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VerticalCardSwitcher_Example' do
+  pod 'VerticalCardSwitcher', :path => '../'
+
+  target 'VerticalCardSwitcher_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

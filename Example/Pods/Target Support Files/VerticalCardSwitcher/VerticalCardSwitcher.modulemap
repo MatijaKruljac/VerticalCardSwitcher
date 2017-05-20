@@ -1,0 +1,6 @@
+framework module VerticalCardSwitcher {
+  umbrella header "VerticalCardSwitcher-umbrella.h"
+
+  export *
+  module * { export * }
+}

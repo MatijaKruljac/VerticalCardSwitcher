@@ -1,0 +1,6 @@
+framework module Pods_VerticalCardSwitcher_Tests {
+  umbrella header "Pods-VerticalCardSwitcher_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

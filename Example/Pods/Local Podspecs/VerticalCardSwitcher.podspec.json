@@ -1,0 +1,22 @@
+{
+  "name": "VerticalCardSwitcher",
+  "version": "0.1.0",
+  "summary": "A short description of VerticalCardSwitcher.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/kruljac.matija@gmail.com/VerticalCardSwitcher",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "kruljac.matija@gmail.com": "kruljac.matija@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/kruljac.matija@gmail.com/VerticalCardSwitcher.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "VerticalCardSwitcher/Classes/**/*"
+}
