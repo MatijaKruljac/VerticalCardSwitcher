@@ -94,12 +94,14 @@ public class VerticalCardSwitcher: NSObject {
         viewControllerView.bringSubview(toFront: cardView)
         let velocity = panGestureRecognizer.velocity(in: viewControllerView)
         
+        if foundedUndesiredState(for: cardView, with: velocity) {
+            resetFrameAndAnimateWhenPanGestureIsEnded(panGestureRecognizer: panGestureRecognizer, with: cardView)
+            shouldEnableNeighbouringCardViewsPanGesture(for: cardView, true)
+            return
+        }
+        
         if panGestureRecognizer.state == .began || panGestureRecognizer.state == .changed {
             shouldEnableNeighbouringCardViewsPanGesture(for: cardView, false)
-            if foundedUndesiredState(for: cardView, with: velocity) {
-                return
-            }
-            
             let translation = panGestureRecognizer.translation(in: viewControllerView)
             cardView.center = CGPoint(x: cardView.center.x, y: cardView.center.y + translation.y)
             makeScaleDepthEffect(with: panGestureRecognizer, for: cardView)
@@ -121,7 +123,7 @@ public class VerticalCardSwitcher: NSObject {
             return true
         }
         // undesired state
-        if cardView.indexInCollection == 0 && velocity.y >= 0 {
+        if cardView.indexInCollection == 0 {
             return true
         }
         return false
@@ -202,7 +204,7 @@ public class VerticalCardSwitcher: NSObject {
     }
     
     private func resetFrameAndAnimateWhenPanGestureIsEnded(panGestureRecognizer: UIPanGestureRecognizer, with cardView: CardView) {
-        if cardView.center.y >= 420 {
+        if cardView.center.y >= 420 && cardView.indexInCollection > 0 {
             changeAnimatedNextCardFrame(for: cardView)
             scale(cardView, withFactor: 1.0)
         } else if cardView.center.y <= 650 {
