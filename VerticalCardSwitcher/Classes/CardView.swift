@@ -11,8 +11,8 @@ import UIKit
 
 public class CardView: UIView {
     
-    public var panGestureRecognizer: UIPanGestureRecognizer!
-    public var indexInCollection: Int!
+    private(set) public var panGestureRecognizer: UIPanGestureRecognizer!
+    private(set) public var indexInCollection: Int!
     
     public init(frame: CGRect, with indexInCollection: Int, andWith panGestureRecognizer: UIPanGestureRecognizer) {
         super.init(frame: frame)
