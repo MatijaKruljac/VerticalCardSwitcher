@@ -95,6 +95,7 @@ public class VerticalCardSwitcher: NSObject {
         let velocity = panGestureRecognizer.velocity(in: viewControllerView)
         
         if foundedUndesiredState(for: cardView, with: velocity) {
+            setupNewFrameForCardViewAndMakeItCurrent(panGestureRecognizer: panGestureRecognizer, with: cardView)
             resetFrameAndAnimateWhenPanGestureIsEnded(panGestureRecognizer: panGestureRecognizer, with: cardView)
             shouldEnableNeighbouringCardViewsPanGesture(for: cardView, true)
             return
@@ -197,7 +198,7 @@ public class VerticalCardSwitcher: NSObject {
             changeAnimatedCurrentCardFrame(for: cardView)
             setupFrameForNextCardView(after: cardView)
         }
-        if cardView.center.y >= 420 && panDirection == .down {
+        if cardView.center.y >= 420 && panDirection == .down && cardView.indexInCollection > 0 {
             addAndRemoveNeighbouringCardViewsOnScrollDown(forCurrentView: cardView.indexInCollection)
             changeAnimatedNextCardFrame(for: cardView)
         }
