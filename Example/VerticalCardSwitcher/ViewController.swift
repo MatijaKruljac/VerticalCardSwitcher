@@ -17,7 +17,7 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         super.viewDidLoad()
         verticalCardSwitcher = VerticalCardSwitcher.init(in: view)
         verticalCardSwitcher.delegate = self
-        verticalCardSwitcher.setupMarginsAndInitialFrames(top: 100, sides: 30)
+        verticalCardSwitcher.setupMarginsAndInitialFrames(sideMargin: 30)
         verticalCardSwitcher.display()
     }
     
@@ -29,6 +29,10 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         return 20.0
     }
     
+    func heightForCardView(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+        return 450.0
+    }
+    
     func addDesign(for cardView: CardView, at index: Int, andFor verticalCardSwitcher: VerticalCardSwitcher) {
         cardView.backgroundColor = UIColor.random()
         cardView.layer.cornerRadius = 8
@@ -36,12 +40,9 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         setupLabel(for: cardView, with: String(index))
     }
     
-    func nextCardStartedScrollingUp(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
-        print("nextCardStartedScrollingUp")
-    }
-    
-    func currentCardStartedScrollingDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
-        print("currentCardStartedScrollingDown")
+    // value from 0 to 1
+    func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+        return 0.20
     }
     
     func currentCardScrolledDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {

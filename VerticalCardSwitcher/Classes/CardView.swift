@@ -24,8 +24,4 @@ public class CardView: UIView {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    public func setup(design: ()->()) {
-        design()
-    }
 }

@@ -9,16 +9,17 @@
 /* Begin PBXBuildFile section */
 		0B43A727462CA6CBCA2A8D96ECAF7862 /* Pods-VerticalCardSwitcher_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C509FE5B00D1189B20B75E9132185D21 /* Pods-VerticalCardSwitcher_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11E57BECA3050D699AFCBABAC9ABFE5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		251A1B8705DAF9221224BD7CF4443745 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016A98D89B2302A86E7A61AE1AB363B0 /* CardView.swift */; };
 		2587F0FAE2EBFE582D194ECEDB8B65F8 /* Pods-VerticalCardSwitcher_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 491357D6F74046DCF1B9F6214AC2F4F0 /* Pods-VerticalCardSwitcher_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28B474014D49F53828D2121B90286AC5 /* Pods-VerticalCardSwitcher_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7018FED7F0F460B6EB0D560D2D4185 /* Pods-VerticalCardSwitcher_Tests-dummy.m */; };
 		3F5DC993A3BE5019F0633F40742A5DFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		46C8D4EF1CEFBA93783A8721D9025AF0 /* Pods-VerticalCardSwitcher_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16569B0216A63C5231DEB96ED1852751 /* Pods-VerticalCardSwitcher_Example-dummy.m */; };
-		4CEDB881B6A84E5F1F135DFB4F727E4C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197C521953F891650D33029628EA0F8 /* CardView.swift */; };
 		4F8806D0D372A2042E93A70E80A6F9E4 /* VerticalCardSwitcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6EB0B5BEECD7D46E74968EF9423012 /* VerticalCardSwitcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58732E9B85AA8CE44A328DA62CFF14AA /* VerticalCardSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62C2386F3CEE0C485502A5D9A7597E /* VerticalCardSwitcher.swift */; };
 		6B3D21B08550D0340685F9C76A6E0D4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		D66E85EB348597C306D3858E5BEBC79D /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3685D253C4F796BA751F4683EF1F8E /* UtilityExtensions.swift */; };
-		DE718FF40927E3EE8C315C027E166C8E /* VerticalCardSwitcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CEDBE3B0971371BA8645B778E03E0 /* VerticalCardSwitcher-dummy.m */; };
+		8AA067C5418162FB63DCDA5495C64BDF /* VerticalCardSwitcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39A3B51F9DA95C03FB0912C7980CF94 /* VerticalCardSwitcherDelegate.swift */; };
+		A1B5289FFE4781E7FA880434B52A1C1B /* VerticalCardSwitcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CEDBE3B0971371BA8645B778E03E0 /* VerticalCardSwitcher-dummy.m */; };
+		A9C2A7BE4594EF1C0EDC0D4F2FDCB765 /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E7501C49EE72CE49132D6A26115DA /* UtilityExtensions.swift */; };
+		C193879CFA40F6A536C6C5DCD7E960D3 /* VerticalCardSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72AF83A9EC150B3E684F7B51FE1F9B0 /* VerticalCardSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016A98D89B2302A86E7A61AE1AB363B0 /* CardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0AC7ECFA20B6579EB9772E0C081040A3 /* Pods-VerticalCardSwitcher_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VerticalCardSwitcher_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		16569B0216A63C5231DEB96ED1852751 /* Pods-VerticalCardSwitcher_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VerticalCardSwitcher_Example-dummy.m"; sourceTree = "<group>"; };
 		1A6CEDBE3B0971371BA8645B778E03E0 /* VerticalCardSwitcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VerticalCardSwitcher-dummy.m"; sourceTree = "<group>"; };
@@ -45,21 +47,21 @@
 		4D6EB0B5BEECD7D46E74968EF9423012 /* VerticalCardSwitcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VerticalCardSwitcher-umbrella.h"; sourceTree = "<group>"; };
 		57D4E94BF015CB1DD69BB9DED792A1B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F006597C35A912764F017905578CC54 /* VerticalCardSwitcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VerticalCardSwitcher.framework; path = VerticalCardSwitcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F62C2386F3CEE0C485502A5D9A7597E /* VerticalCardSwitcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalCardSwitcher.swift; sourceTree = "<group>"; };
+		885E7501C49EE72CE49132D6A26115DA /* UtilityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		897CE35D560B1B844CFEA57AE99DA1F1 /* Pods-VerticalCardSwitcher_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VerticalCardSwitcher_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99A0E49C40A04D831C1E0A96F4186016 /* Pods-VerticalCardSwitcher_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VerticalCardSwitcher_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A72AF83A9EC150B3E684F7B51FE1F9B0 /* VerticalCardSwitcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalCardSwitcher.swift; sourceTree = "<group>"; };
 		A8FC35B05B110D6B023A5801534321EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF12C154DB4787E9E1B149216D80B85B /* Pods-VerticalCardSwitcher_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VerticalCardSwitcher_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C105A3E2CBE33158318D1FAC0B016495 /* Pods-VerticalCardSwitcher_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VerticalCardSwitcher_Tests-resources.sh"; sourceTree = "<group>"; };
 		C30DF4C032BF0EDDD25FECD3BC527C6A /* Pods-VerticalCardSwitcher_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VerticalCardSwitcher_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C39A3B51F9DA95C03FB0912C7980CF94 /* VerticalCardSwitcherDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VerticalCardSwitcherDelegate.swift; sourceTree = "<group>"; };
 		C509FE5B00D1189B20B75E9132185D21 /* Pods-VerticalCardSwitcher_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VerticalCardSwitcher_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C5E9142C3ED24A68A4AEEBF98269F539 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB3685D253C4F796BA751F4683EF1F8E /* UtilityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E002E0C2E550BD3613F7F42D90017380 /* VerticalCardSwitcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VerticalCardSwitcher-prefix.pch"; sourceTree = "<group>"; };
 		E1868351F08B1FBC8F5B81B2AFE69365 /* Pods-VerticalCardSwitcher_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VerticalCardSwitcher_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E197C521953F891650D33029628EA0F8 /* CardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E352C054629B1B497900DFF24760DCF3 /* VerticalCardSwitcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = VerticalCardSwitcher.modulemap; sourceTree = "<group>"; };
 		E41C7B503051C86A0ECABA0826859678 /* Pods-VerticalCardSwitcher_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VerticalCardSwitcher_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		EACD2B2833DE7A75DBF135B7FE7C0E4C /* Pods-VerticalCardSwitcher_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VerticalCardSwitcher_Example-resources.sh"; sourceTree = "<group>"; };
@@ -96,15 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		051A58BDCDDAAD79B27E9338EB36DF4A /* VerticalCardSwitcher */ = {
-			isa = PBXGroup;
-			children = (
-				E8C5C44B1F435B56637894A232A561E0 /* Classes */,
-			);
-			name = VerticalCardSwitcher;
-			path = VerticalCardSwitcher;
-			sourceTree = "<group>";
-		};
 		07D739D1965D02C08BCEEE8FD4B2CE3C /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +119,15 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/VerticalCardSwitcher";
+			sourceTree = "<group>";
+		};
+		5B17A9015ED1F32995D8ED93BA36A4F1 /* VerticalCardSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				A95AE606FDE57E8872929D2018AA5405 /* Classes */,
+			);
+			name = VerticalCardSwitcher;
+			path = VerticalCardSwitcher;
 			sourceTree = "<group>";
 		};
 		5D2D7EFBD211937F722A5967465F67A8 /* Products */ = {
@@ -168,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				55064DFE986B7D71F8BED38C3B90B495 /* Support Files */,
-				051A58BDCDDAAD79B27E9338EB36DF4A /* VerticalCardSwitcher */,
+				5B17A9015ED1F32995D8ED93BA36A4F1 /* VerticalCardSwitcher */,
 			);
 			name = VerticalCardSwitcher;
 			path = ../..;
@@ -183,6 +185,18 @@
 				5D2D7EFBD211937F722A5967465F67A8 /* Products */,
 				07D739D1965D02C08BCEEE8FD4B2CE3C /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A95AE606FDE57E8872929D2018AA5405 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				016A98D89B2302A86E7A61AE1AB363B0 /* CardView.swift */,
+				885E7501C49EE72CE49132D6A26115DA /* UtilityExtensions.swift */,
+				A72AF83A9EC150B3E684F7B51FE1F9B0 /* VerticalCardSwitcher.swift */,
+				C39A3B51F9DA95C03FB0912C7980CF94 /* VerticalCardSwitcherDelegate.swift */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		AB5442394B3B593291C45C66887E48FB /* Pods-VerticalCardSwitcher_Example */ = {
@@ -217,17 +231,6 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E8C5C44B1F435B56637894A232A561E0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E197C521953F891650D33029628EA0F8 /* CardView.swift */,
-				CB3685D253C4F796BA751F4683EF1F8E /* UtilityExtensions.swift */,
-				7F62C2386F3CEE0C485502A5D9A7597E /* VerticalCardSwitcher.swift */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17005E877F0DD65B58F6B61130F09508 /* Build configuration list for PBXNativeTarget "VerticalCardSwitcher" */;
 			buildPhases = (
-				D89C34963187A16AA33D1B3407CDE3A4 /* Sources */,
+				661CF19DAAB34503823CB4B72D690C74 /* Sources */,
 				F3A54979DC45CBD3349EADD85997B504 /* Frameworks */,
 				F2FF5AC46945DFEED11358219D07F14C /* Headers */,
 			);
@@ -341,22 +344,23 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		661CF19DAAB34503823CB4B72D690C74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251A1B8705DAF9221224BD7CF4443745 /* CardView.swift in Sources */,
+				A9C2A7BE4594EF1C0EDC0D4F2FDCB765 /* UtilityExtensions.swift in Sources */,
+				A1B5289FFE4781E7FA880434B52A1C1B /* VerticalCardSwitcher-dummy.m in Sources */,
+				C193879CFA40F6A536C6C5DCD7E960D3 /* VerticalCardSwitcher.swift in Sources */,
+				8AA067C5418162FB63DCDA5495C64BDF /* VerticalCardSwitcherDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7AE87AF1214E75CACB4C5CAD3B3D91A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28B474014D49F53828D2121B90286AC5 /* Pods-VerticalCardSwitcher_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D89C34963187A16AA33D1B3407CDE3A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CEDB881B6A84E5F1F135DFB4F727E4C /* CardView.swift in Sources */,
-				D66E85EB348597C306D3858E5BEBC79D /* UtilityExtensions.swift in Sources */,
-				DE718FF40927E3EE8C315C027E166C8E /* VerticalCardSwitcher-dummy.m in Sources */,
-				58732E9B85AA8CE44A328DA62CFF14AA /* VerticalCardSwitcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
