@@ -17,7 +17,7 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         super.viewDidLoad()
         verticalCardSwitcher = VerticalCardSwitcher.init(in: view)
         verticalCardSwitcher.delegate = self
-        verticalCardSwitcher.setupMarginsAndInitialFrames(sideMargin: 30)
+        verticalCardSwitcher.setupMarginsAndInitialFrames(sideMargin: 40)
         verticalCardSwitcher.display()
     }
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
     }
     
     func heightForCardView(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
-        return 450.0
+        return 430.0
     }
     
     func addDesign(for cardView: CardView, at index: Int, andFor verticalCardSwitcher: VerticalCardSwitcher) {

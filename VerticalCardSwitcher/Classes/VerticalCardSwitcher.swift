@@ -21,7 +21,9 @@ public class VerticalCardSwitcher: NSObject {
     
     private var currentCardFrame = CGRect.zero
     private var nextCardFrame = CGRect.zero
-    private var border: CGFloat!
+    
+    private var upperBorder: CGFloat!
+    private var bottomBorder: CGFloat!
     
     private let initialNumberOfAddedCardsToSuperView = 3
     
@@ -37,7 +39,8 @@ public class VerticalCardSwitcher: NSObject {
             ((1+delegate.heightOfShowedPartForEveryNextCard(in: self))*delegate.heightForCardView(in: self) +
                 delegate.distanceBetweenCards(for: self))
         self.setupInitialFrames()
-        self.border = yOriginCurrentCard + currentCardFrame.size.height/2
+        self.upperBorder = yOriginCurrentCard + 0.2*currentCardFrame.size.height
+        self.bottomBorder = yOriginCurrentCard + 0.8*currentCardFrame.size.height
     }
     
     private func setupInitialFrames() {
@@ -133,10 +136,10 @@ public class VerticalCardSwitcher: NSObject {
     
     private func handleDelegateWhenEndedScrolling(with panGestureRecognizer: UIPanGestureRecognizer, for cardView: CardView) {
         let panDirection: UIPanGestureRecognizer.PanDirection = panGestureRecognizer.determineVerticalDirection(for: cardView)
-        if cardView.frame.origin.y < border && panDirection == .up {
+        if cardView.frame.origin.y < bottomBorder && panDirection == .up {
             delegate?.nextCardScrolledUp?(cardView: cardView, for: self)
         }
-        if cardView.frame.origin.y >= border {
+        if cardView.frame.origin.y >= upperBorder {
             delegate?.currentCardScrolledDown?(cardView: cardView, for: self)
         }
     }
@@ -175,23 +178,23 @@ public class VerticalCardSwitcher: NSObject {
     
     private func setupNewFrameForCardViewAndMakeItCurrent(panGestureRecognizer: UIPanGestureRecognizer, with cardView: CardView) {
         let panDirection: UIPanGestureRecognizer.PanDirection = panGestureRecognizer.determineVerticalDirection(for: cardView)
-        if  cardView.frame.origin.y < border && panDirection == .up {
+        if  cardView.frame.origin.y < bottomBorder && panDirection == .up {
             addAndRemoveNeighbouringCardViewsOnScrollUp(forCurrentView: cardView.indexInCollection)
             changeAnimatedCurrentCardFrame(for: cardView)
             setupFrameForNextCardView(after: cardView)
         }
-        if cardView.frame.origin.y >= border && cardView.indexInCollection > 0 {
+        if cardView.frame.origin.y >= upperBorder && cardView.indexInCollection > 0 {
             addAndRemoveNeighbouringCardViewsOnScrollDown(forCurrentView: cardView.indexInCollection)
             changeAnimatedNextCardFrame(for: cardView)
         }
     }
     
     private func resetFrameAndAnimateWhenPanGestureIsEnded(panGestureRecognizer: UIPanGestureRecognizer, with cardView: CardView) {
-        if cardView.frame.origin.y >= border && cardView.indexInCollection > 0 {
+        if cardView.frame.origin.y >= upperBorder && cardView.indexInCollection > 0 {
             changeAnimatedNextCardFrame(for: cardView)
             scale(cardView, withFactor: 1.0)
         }
-        if cardView.frame.origin.y < border {
+        if cardView.frame.origin.y < bottomBorder {
             changeAnimatedCurrentCardFrame(for: cardView)
             scale(cardView, withFactor: 0.85)
         }
