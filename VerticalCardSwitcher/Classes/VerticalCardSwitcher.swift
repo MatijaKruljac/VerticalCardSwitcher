@@ -74,7 +74,7 @@ public class VerticalCardSwitcher: NSObject {
             panGestureRecognizer.maximumNumberOfTouches = 1
             
             let cardView = CardView.init(frame: cardFrame, with: index, andWith: panGestureRecognizer)
-            delegate.addDesign(for: cardView, at: index, andFor: self)
+            delegate.addDesign(for: cardView, at: index, in: self)
             cardView.setupBlurView()
             
             cards.append(cardView)

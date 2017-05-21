@@ -33,7 +33,7 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         return 430.0
     }
     
-    func addDesign(for cardView: CardView, at index: Int, andFor verticalCardSwitcher: VerticalCardSwitcher) {
+    func addDesign(for cardView: CardView, at index: Int, in verticalCardSwitcher: VerticalCardSwitcher) {
         cardView.backgroundColor = UIColor.random()
         cardView.layer.cornerRadius = 8
         cardView.layer.masksToBounds = true
