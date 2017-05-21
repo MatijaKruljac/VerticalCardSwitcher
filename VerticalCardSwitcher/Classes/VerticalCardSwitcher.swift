@@ -75,6 +75,8 @@ public class VerticalCardSwitcher: NSObject {
             
             let cardView = CardView.init(frame: cardFrame, with: index, andWith: panGestureRecognizer)
             delegate.addDesign(for: cardView, at: index, andFor: self)
+            cardView.setupBlurView()
+            
             cards.append(cardView)
             
             if index < initialNumberOfAddedCardsToSuperView {
@@ -128,9 +130,9 @@ public class VerticalCardSwitcher: NSObject {
         // scale - depth effect
         switch panGestureRecognizer.determineVerticalDirection(for: cardView) {
         case .up:
-            scale(cardView, withFactor: 0.85)
+            scaleCardViewAndChangeAlphaOfBlurView(cardView, withFactor: 0.85)
         case .down:
-            scale(cardView, withFactor: 1.0)
+            scaleCardViewAndChangeAlphaOfBlurView(cardView, withFactor: 1.0)
         }
     }
     
@@ -192,11 +194,11 @@ public class VerticalCardSwitcher: NSObject {
     private func resetFrameAndAnimateWhenPanGestureIsEnded(panGestureRecognizer: UIPanGestureRecognizer, with cardView: CardView) {
         if cardView.frame.origin.y >= upperBorder && cardView.indexInCollection > 0 {
             changeAnimatedNextCardFrame(for: cardView)
-            scale(cardView, withFactor: 1.0)
+            scaleCardViewAndChangeAlphaOfBlurView(cardView, withFactor: 1.0)
         }
         if cardView.frame.origin.y < bottomBorder {
             changeAnimatedCurrentCardFrame(for: cardView)
-            scale(cardView, withFactor: 0.85)
+            scaleCardViewAndChangeAlphaOfBlurView(cardView, withFactor: 0.85)
         }
         viewControllerView.bringSubview(toFront: panGestureRecognizer.view!)
     }
@@ -208,12 +210,17 @@ public class VerticalCardSwitcher: NSObject {
         }
     }
     
-    private func scale(_ cardView: CardView, withFactor factor: CGFloat) {
+    private func scaleCardViewAndChangeAlphaOfBlurView(_ cardView: CardView, withFactor factor: CGFloat) {
         if cardView.indexInCollection > 0 {
             if #available(iOS 10.0, *) {
                 let viewAnimator = UIViewPropertyAnimator(duration: 0.2, curve: .easeOut, animations: { [weak self] _ in
                     guard let sSelf = self else { return }
                     let previousCardView = sSelf.cards[cardView.indexInCollection - 1]
+                    if factor == 0.85 {
+                        previousCardView.blurEffectView.alpha = 0.7
+                    } else {
+                        previousCardView.blurEffectView.alpha = 0.0
+                    }
                     previousCardView.transform = CGAffineTransform(scaleX: factor, y: factor)
                 })
                 viewAnimator.startAnimation()
@@ -222,6 +229,11 @@ public class VerticalCardSwitcher: NSObject {
                 UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: { [weak self] _ in
                     guard let sSelf = self else { return }
                     let previousCardView = sSelf.cards[cardView.indexInCollection - 1]
+                    if factor == 0.85 {
+                        previousCardView.blurEffectView.alpha = 0.7
+                    } else {
+                        previousCardView.blurEffectView.alpha = 0.0
+                    }
                     previousCardView.transform = CGAffineTransform(scaleX: factor, y: factor)
                 }, completion: nil)
             }
