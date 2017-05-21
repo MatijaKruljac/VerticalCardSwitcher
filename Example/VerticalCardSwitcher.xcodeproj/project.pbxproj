@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* FirstViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9151AAD40926B0A284D1FEA9 /* Pods_VerticalCardSwitcher_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CAEBEFD6F378BB24233FB02 /* Pods_VerticalCardSwitcher_Example.framework */; };
 		93BE33276C438F979AB081A2 /* Pods_VerticalCardSwitcher_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF10D0EAA6EDE182EEC411E /* Pods_VerticalCardSwitcher_Tests.framework */; };
+		AFB5AB3C1ED1CF5D00F6FD5A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AB3B1ED1CF5D00F6FD5A /* SecondViewController.swift */; };
+		AFB5AB3E1ED1D10800F6FD5A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB5AB3D1ED1D10800F6FD5A /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 		607FACD01AFB9204008FA782 /* VerticalCardSwitcher_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalCardSwitcher_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		6AEA7373DC67C2DAEA921C97 /* Pods-VerticalCardSwitcher_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerticalCardSwitcher_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VerticalCardSwitcher_Example/Pods-VerticalCardSwitcher_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		825AFFC55378BF079DFA0AD4 /* VerticalCardSwitcher.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VerticalCardSwitcher.podspec; path = ../VerticalCardSwitcher.podspec; sourceTree = "<group>"; };
 		9539AA9FB940573C44C09A3C /* Pods-VerticalCardSwitcher_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerticalCardSwitcher_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VerticalCardSwitcher_Tests/Pods-VerticalCardSwitcher_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AFB5AB3B1ED1CF5D00F6FD5A /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		AFB5AB3D1ED1D10800F6FD5A /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		DFF10D0EAA6EDE182EEC411E /* Pods_VerticalCardSwitcher_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VerticalCardSwitcher_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				AFB5AB3D1ED1D10800F6FD5A /* InitialViewController.swift */,
+				607FACD71AFB9204008FA782 /* FirstViewController.swift */,
+				AFB5AB3B1ED1CF5D00F6FD5A /* SecondViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -363,8 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				AFB5AB3C1ED1CF5D00F6FD5A /* SecondViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* FirstViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				AFB5AB3E1ED1D10800F6FD5A /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

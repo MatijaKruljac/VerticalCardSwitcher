@@ -1,25 +1,117 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yzh-67-RtV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
+        <scene sceneID="ci4-AU-xTv">
+            <objects>
+                <viewController id="wqF-vC-qtx" customClass="InitialViewController" customModule="VerticalCardSwitcher_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MM2-6S-Rgx"/>
+                        <viewControllerLayoutGuide type="bottom" id="a3c-Wk-hBg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o41-8Q-0Zb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSk-8h-vXl">
+                                <rect key="frame" x="108" y="234" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ZUI-TJ-qAB"/>
+                                    <constraint firstAttribute="height" constant="60" id="trK-cc-4jc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Example 1"/>
+                                <connections>
+                                    <action selector="example1ButtonTapped:" destination="wqF-vC-qtx" eventType="touchUpInside" id="N8n-o2-kXU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlo-qo-NOR">
+                                <rect key="frame" x="108" y="373" width="150" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Example 2"/>
+                                <connections>
+                                    <action selector="example2ButtonTapped:" destination="wqF-vC-qtx" eventType="touchUpInside" id="RHZ-Tb-Fah"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zSk-8h-vXl" firstAttribute="top" secondItem="MM2-6S-Rgx" secondAttribute="bottom" constant="170" id="6EM-qX-Upa"/>
+                            <constraint firstItem="a3c-Wk-hBg" firstAttribute="top" secondItem="Jlo-qo-NOR" secondAttribute="bottom" constant="234" id="8n4-2k-1Re"/>
+                            <constraint firstItem="Jlo-qo-NOR" firstAttribute="top" secondItem="zSk-8h-vXl" secondAttribute="bottom" constant="79" id="IZe-Js-8qg"/>
+                            <constraint firstItem="zSk-8h-vXl" firstAttribute="leading" secondItem="Jlo-qo-NOR" secondAttribute="leading" id="OBH-N1-PWS"/>
+                            <constraint firstItem="zSk-8h-vXl" firstAttribute="leading" secondItem="o41-8Q-0Zb" secondAttribute="leadingMargin" constant="92" id="k8j-Pl-5Qn"/>
+                            <constraint firstItem="zSk-8h-vXl" firstAttribute="trailing" secondItem="Jlo-qo-NOR" secondAttribute="trailing" id="ux7-ji-7wB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iMX-Tc-cF9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaJ-S8-Hl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="265.81709145427288"/>
+        </scene>
+        <!--First View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="vXZ-lx-hvc" customClass="FirstViewController" customModule="VerticalCardSwitcher_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="61.619190404797607"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="D2c-kl-nm1">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="pHD-Ie-L9H" customClass="SecondViewController" customModule="VerticalCardSwitcher_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IUW-0j-uQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5oV-vz-Kat"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GhM-wN-GO7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPF-38-LHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="787.55622188905556"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ffn-B0-BB4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yzh-67-RtV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="54P-dy-Q30">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wqF-vC-qtx" kind="relationship" relationship="rootViewController" id="wTG-Li-fWh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLs-0z-Nfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.39999999999998" y="265.81709145427288"/>
         </scene>
     </scenes>
 </document>

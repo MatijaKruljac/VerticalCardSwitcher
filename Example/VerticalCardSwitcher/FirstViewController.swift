@@ -6,15 +6,18 @@
 //  Copyright (c) 2017 kruljac.matija@gmail.com. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import VerticalCardSwitcher
 
-class ViewController: UIViewController, VerticalCardSwitcherDelegate {
+class FirstViewController: UIViewController, VerticalCardSwitcherDelegate {
     
-    var verticalCardSwitcher: VerticalCardSwitcher!
+    private var verticalCardSwitcher: VerticalCardSwitcher!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Example 1"
+        
         verticalCardSwitcher = VerticalCardSwitcher.init(in: view)
         verticalCardSwitcher.delegate = self
         verticalCardSwitcher.display()
@@ -43,7 +46,7 @@ class ViewController: UIViewController, VerticalCardSwitcherDelegate {
         setupLabel(for: cardView, with: String(index))
     }
     
-    // value from 0 to 1
+    // values from 0 to 1
     func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
         return 0.20
     }
