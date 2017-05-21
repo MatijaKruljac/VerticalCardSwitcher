@@ -32,33 +32,8 @@ public class VerticalCardSwitcher: NSObject {
         self.viewControllerView = viewControllerView
     }
     
-    public func setupMarginsAndInitialFrames(sideMargin: CGFloat) {
-        guard let delegate = delegate else { return }
-        self.xOriginCurrentCard = viewControllerView.frame.origin.x + sideMargin
-        self.yOriginCurrentCard = viewControllerView.frame.size.height -
-            ((1+delegate.heightOfShowedPartForEveryNextCard(in: self))*delegate.heightForCardView(in: self) +
-                delegate.distanceBetweenCards(for: self))
-        self.setupInitialFrames()
-        self.upperBorder = yOriginCurrentCard + 0.2*currentCardFrame.size.height
-        self.bottomBorder = yOriginCurrentCard + 0.8*currentCardFrame.size.height
-    }
-    
-    private func setupInitialFrames() {
-        guard let delegate = delegate else { return }
-        currentCardFrame = CGRect(
-            x: xOriginCurrentCard,
-            y: yOriginCurrentCard,
-            width: viewControllerView.frame.size.width - 2*xOriginCurrentCard,
-            height: delegate.heightForCardView(in: self))
-        
-        nextCardFrame = CGRect(
-            x: xOriginCurrentCard,
-            y: yOriginCurrentCard + currentCardFrame.size.height + delegate.distanceBetweenCards(for: self),
-            width: viewControllerView.frame.size.width - 2*xOriginCurrentCard,
-            height: delegate.heightForCardView(in: self))
-    }
-    
     public func display() {
+        setupMarginsAndInitialFrames()
         guard let delegate = delegate else { return }
         var yOriginNextCard: CGFloat = yOriginCurrentCard
         
@@ -84,6 +59,32 @@ public class VerticalCardSwitcher: NSObject {
             }
             yOriginNextCard += currentCardFrame.size.height + delegate.distanceBetweenCards(for: self)
         }
+    }
+    
+    private func setupMarginsAndInitialFrames() {
+        guard let delegate = delegate else { return }
+        self.xOriginCurrentCard = viewControllerView.frame.origin.x + delegate.sideMargins(for: self)
+        self.yOriginCurrentCard = viewControllerView.frame.size.height -
+            ((1+delegate.heightOfShowedPartForEveryNextCard(in: self))*delegate.heightForCardView(in: self) +
+                delegate.distanceBetweenCards(for: self))
+        self.setupInitialFrames()
+        self.upperBorder = yOriginCurrentCard + 0.2*currentCardFrame.size.height
+        self.bottomBorder = yOriginCurrentCard + 0.8*currentCardFrame.size.height
+    }
+    
+    private func setupInitialFrames() {
+        guard let delegate = delegate else { return }
+        currentCardFrame = CGRect(
+            x: xOriginCurrentCard,
+            y: yOriginCurrentCard,
+            width: viewControllerView.frame.size.width - 2*xOriginCurrentCard,
+            height: delegate.heightForCardView(in: self))
+        
+        nextCardFrame = CGRect(
+            x: xOriginCurrentCard,
+            y: yOriginCurrentCard + currentCardFrame.size.height + delegate.distanceBetweenCards(for: self),
+            width: viewControllerView.frame.size.width - 2*xOriginCurrentCard,
+            height: delegate.heightForCardView(in: self))
     }
     
     @objc private func handlePanGesture(panGestureRecognizer: UIPanGestureRecognizer) {

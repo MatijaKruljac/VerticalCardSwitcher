@@ -13,6 +13,7 @@ import Foundation
     func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int
     func distanceBetweenCards(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat
     func heightForCardView(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat
+    func sideMargins(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat
     func addDesign(for cardView: CardView, at index: Int, in verticalCardSwitcher: VerticalCardSwitcher)
     func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat
     
