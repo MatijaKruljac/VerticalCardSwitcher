@@ -15,12 +15,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 </br>
 <p>
 <p align="center">
-<img src="https://github.com/MatijaKruljac/VerticalCardSwitcher/blob/master/vertical_card_switcher_example_1.gif?raw=true" width="200" height="400" >
+<img src="https://github.com/MatijaKruljac/VerticalCardSwitcher/blob/master/vertical_card_switcher_example_1.gif?raw=true" >
 </p>
 </br>
 <p>
 <p align="center">
-<img src="https://github.com/MatijaKruljac/VerticalCardSwitcher/blob/master/vertical_card_switcher_example_2.gif?raw=true" width="200" height="400" >
+<img src="https://github.com/MatijaKruljac/VerticalCardSwitcher/blob/master/vertical_card_switcher_example_2.gif?raw=true" >
 </p>
 
 ## Requirements
