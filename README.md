@@ -1,6 +1,6 @@
 # VerticalCardSwitcher
 
-VerticalCardSwitcher is inspired by Shazam Discover view. It is a vertical sequence of UIViews where first UIView in sequence is always displayed and every next UIView is partially displayed. Also there is VerticalCardSwitcherDelegate which is added for VerticalCardSwitcher customization. VerticalCardSwitcher is not implemented with UICollectionView and it's contained inside parent view.
+`VerticalCardSwitcher` is inspired by Shazam Discover view. It is a vertical sequence of `UIView`s where first `UIView` in sequence is always completely displayed and every next `UIView` is partially displayed. Also there is `VerticalCardSwitcherDelegate` which is added for `VerticalCardSwitcher` customization. `VerticalCardSwitcher` is not implemented with `UICollectionView` and it's contained inside parent view.
 
 [![CI Status](https://travis-ci.org/MatijaKruljac/VerticalCardSwitcher.svg?branch=master)](https://travis-ci.org/MatijaKruljac/VerticalCardSwitcher.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/VerticalCardSwitcher.svg?style=flat)](http://cocoapods.org/pods/VerticalCardSwitcher)
