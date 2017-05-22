@@ -49,14 +49,14 @@ end
 ```
 ## Usage
 
-- Add `VerticalCardSwitcherDelegate` for delegate class:
+1. Add `VerticalCardSwitcherDelegate` for delegate class:
 ```swift 
 class ViewController: UIViewController, VerticalCardSwitcherDelegate {
 
 }
 ```
 
-- Initialize and setup `VerticalCardSwitcher`:
+2. Initialize and setup `VerticalCardSwitcher`:
 ```swift
 private var verticalCardSwitcher: VerticalCardSwitcher!
 
@@ -65,7 +65,7 @@ verticalCardSwitcher.delegate = self
 verticalCardSwitcher.display()
 ```
 
-- Implement `VerticalCardSwitcherDelegate` methods:
+3. Implement `VerticalCardSwitcherDelegate` methods:
 ```swift
 func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int {
     return 22
@@ -93,7 +93,7 @@ func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwi
 }
 ```
 
-- Implement `VerticalCardSwitcherDelegate` optional methods for scrolling events of CardView:
+4. Implement `VerticalCardSwitcherDelegate` optional methods for scrolling events of CardView:
 ```swift
 func currentCardScrolledDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
     print("currentCardScrolledDown")
