@@ -11,15 +11,15 @@ VerticalCardSwitcher is inspired by Shazam Discover view. It is a vertical seque
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first. There are two examples `FirstViewController` and `SecondViewController`.
 
-<p>
 - Example 1 (`FirstViewController`):
+<p>
 <p align="center">
 <img src="https://github.com/MatijaKruljac/VerticalCardSwitcher/blob/master/vertical_card_switcher_example_1.gif?raw=true" >
 </p>
 </br>
 
-<p>
 - Example 2 (`FirstViewController`):
+<p>
 <p align="center">
 <img src="https://github.com/MatijaKruljac/VerticalCardSwitcher/blob/master/vertical_card_switcher_example_2.gif?raw=true" >
 </p>
