@@ -9,7 +9,14 @@ VerticalCardSwitcher is inspired by Shazam Discover view. It is a vertical seque
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. There are two examples `FirstViewController` and `SecondViewController`.
+
+</br>
+<p>
+<p align="center">
+<img src="" >
+</p>
+</br>
 
 ## Requirements
 
@@ -33,48 +40,48 @@ end
 ## Usage
 
 ```swift
-    private var verticalCardSwitcher: VerticalCardSwitcher!
+private var verticalCardSwitcher: VerticalCardSwitcher!
 
-    verticalCardSwitcher = VerticalCardSwitcher.init(in: view)
-    verticalCardSwitcher.delegate = self
-    verticalCardSwitcher.display()
+verticalCardSwitcher = VerticalCardSwitcher.init(in: view)
+verticalCardSwitcher.delegate = self
+verticalCardSwitcher.display()
 ```
 
 ```swift
-    func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int {
-        return 22
-    }
+func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int {
+    return 22
+}
 
-    func distanceBetweenCards(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
-        return 20.0
-    }
+func distanceBetweenCards(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+    return 20.0
+}
 
-    func heightForCardView(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
-        return 430.0
-    }
+func heightForCardView(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+    return 430.0
+}
 
-    func sideMargins(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
-        return 40.0
-    }
+func sideMargins(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+    return 40.0
+}
 
-    func addDesign(for cardView: CardView, at index: Int, in verticalCardSwitcher: VerticalCardSwitcher) {
+func addDesign(for cardView: CardView, at index: Int, in verticalCardSwitcher: VerticalCardSwitcher) {
 
-    }
+}
 
-    // values from 0 to 1
-    func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
-        return 0.20
-    }
+// values from 0 to 1
+func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+    return 0.20
+}
 ```
 
 ```swift
-    func currentCardScrolledDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
-        print("currentCardScrolledDown")
-    }
+func currentCardScrolledDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
+    print("currentCardScrolledDown")
+}
 
-    func nextCardScrolledUp(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
-        print("nextCardScrolledUp")
-    }
+func nextCardScrolledUp(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
+    print("nextCardScrolledUp")
+}
 ```
 
 ## Author
