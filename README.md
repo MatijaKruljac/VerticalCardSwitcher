@@ -32,6 +32,51 @@ end
 ```
 ## Usage
 
+```swift
+    private var verticalCardSwitcher: VerticalCardSwitcher!
+
+    verticalCardSwitcher = VerticalCardSwitcher.init(in: view)
+    verticalCardSwitcher.delegate = self
+    verticalCardSwitcher.display()
+```
+
+```swift
+    func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int {
+        return 22
+    }
+
+    func distanceBetweenCards(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+        return 20.0
+    }
+
+    func heightForCardView(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+        return 430.0
+    }
+
+    func sideMargins(for verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+        return 40.0
+    }
+
+    func addDesign(for cardView: CardView, at index: Int, in verticalCardSwitcher: VerticalCardSwitcher) {
+
+    }
+
+    // values from 0 to 1
+    func heightOfShowedPartForEveryNextCard(in verticalCardSwitcher: VerticalCardSwitcher) -> CGFloat {
+        return 0.20
+    }
+```
+
+```swift
+    func currentCardScrolledDown(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
+        print("currentCardScrolledDown")
+    }
+
+    func nextCardScrolledUp(cardView: CardView, for verticalCardSwitcher: VerticalCardSwitcher) {
+        print("nextCardScrolledUp")
+    }
+```
+
 ## Author
 
 Matija Kruljac, kruljac.matija@gmail.com
