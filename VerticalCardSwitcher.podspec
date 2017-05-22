@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VerticalCardSwitcher'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'VerticalCardSwitcher is library that provides UI list of cards which can be iterated by swiping up and down.'
 
 # This description is used to generate tags and improve search results.
