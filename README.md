@@ -65,7 +65,7 @@ verticalCardSwitcher.delegate = self
 verticalCardSwitcher.display()
 ```
 
-3. Implement `VerticalCardSwitcherDelegate` methods:
+3. Implement `VerticalCardSwitcherDelegate` required methods:
 ```swift
 func numberOfCards(for verticalCardSwitcher: VerticalCardSwitcher) -> Int {
     return 22
